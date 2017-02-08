@@ -1,0 +1,174 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Jacobo Tapia A01336590">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo de javscript puro</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    
+    
+    <div class="container">
+      <div class="header">
+        
+        <h3 class="text-muted">Ejemplo de clase</h3>
+      </div>
+
+      <p>Ingresa una busqueda:<p> 
+      <input type="text" id="query" onchange="busqueda()">
+
+      <table class="table">
+        <thead>
+            <tr>
+              <th>Nómina</th> 
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Departamento</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="lista">
+          </tbody>
+      </table>
+
+      <a href="#registroModal" class="btn btn-primary" data-toggle="modal">Registrar empleado</a>
+
+
+      <div class="footer">
+        <p>♥ from the Kid - A Team</p>
+      </div>
+
+
+      <div id="registroModal" class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title">Nuevo empleado</h4>
+                  </div>
+                  <form id="registro" action="javascript:registrarEmpleado()">
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="nomina">Nómina:</label>
+                      <input type="text" class="form-control input-sm" id="nomina"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="nombre">Nombre:</label>
+                      <input type="text" class="form-control input-sm" id="nombre"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="apellido">Apellido:</label>
+                      <input type="text" class="form-control input-sm" id="apellido"/>
+                    </div>
+                     <div class="form-group">
+                      <label for="departamento">Departamento:</label>
+                      <select class="form-control input-sm" id="departamento">
+                        <option value="Ventas">Ventas</option>
+                        <option value="Almacén">Almacén</option>
+                        <option value="Suministros">Suministros</option>
+                        <option value="Gerencia">Gerencia</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <input type="submit" class="btn btn-info" value="Registrar trabajador"></div>
+                  </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+
+
+      <div id="updateModal" class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title">Modificar empleado</h4>
+                  </div>
+                  <form id="registro" action="javascript:updateEmpleado()">
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <input type="hidden" class="form-control input-sm" id="idUpd"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="nominaUpd">Nómina:</label>
+                      <input type="text" class="form-control input-sm" id="nominaUpd"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="nombreUpd">Nombre:</label>
+                      <input type="text" class="form-control input-sm" id="nombreUpd"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="apellidoUpd">Apellido:</label>
+                      <input type="text" class="form-control input-sm" id="apellidoUpd"/>
+                    </div>
+                     <div class="form-group">
+                      <label for="departamentoUpd">Departamento:</label>
+                      <select class="form-control input-sm" id="departamentoUpd">
+                        <option value="Ventas">Ventas</option>
+                        <option value="Almacén">Almacén</option>
+                        <option value="Suministros">Suministros</option>
+                        <option value="Gerencia">Gerencia</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <input type="submit" class="btn btn-info" value="Actualizar trabajador"></div>
+                  </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+
+
+    </div>
+
+
+    
+  
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

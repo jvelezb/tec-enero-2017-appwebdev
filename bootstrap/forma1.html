@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Forma </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Forma</h2>
+  <form>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Introducir email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="introducir  password">
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tipo de alumno
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+        <li role="presentation"><a role="menuitem" href="#">Ingeniero</a></li>
+        <li role="presentation"><a role="menuitem" href="#">Licenciado</a></li>
+        <li role="presentation"><a role="menuitem" href="#">Posgrado</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" href="#">Preparatoria</a></li>
+      </ul>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Recordar</label>
+    </div>
+
+    <button type="submit" class="btn btn-default">Enviar</button>
+  </form>
+
+  <form>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">Text</span>
+    <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+  </div>
+</form>
+<div class="col-xs-2">
+  <label for="ex1">col-xs-2</label>
+  <input class="form-control" id="ex1" type="text">
+</div>
+<div class="col-xs-3">
+  <label for="ex2">col-xs-3</label>
+  <input class="form-control" id="ex2" type="text">
+</div>
+<div class="col-xs-4">
+  <label for="ex3">col-xs-4</label>
+  <input class="form-control" id="ex3" type="text">
+</div>
+</div>
+
+</body>
+</html>
