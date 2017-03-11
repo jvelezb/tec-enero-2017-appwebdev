@@ -10,12 +10,11 @@
  */
 angular.module('angularTec1App')
   .filter('asistentes', function ($log) {
-    return function (items, mostrarTodos) {
-    	$log.debug(items[0].nombre+" valr "+mostrarTodos);
+    return function (items,mostrarTodos) {
+    
       var resultado=[];
       angular.forEach(items, function(item){
-      	if(item.estatus ==false|| mostrarTodos ==true){
-      		mostrarTodos = true;
+      	if(item.estatus ==true|| mostrarTodos ==true){
       		resultado.push(item);
 
       	}

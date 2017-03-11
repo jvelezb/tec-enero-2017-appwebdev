@@ -19,9 +19,10 @@
     <button class="btn btn-default" ng-click="addAlumno(alumnoInput)">Añadir</button>
     </span>
   </div>
-  <table class="table table-striped">
+  <table class="table ">
     <thead>
       <tr>
+      <th>ID </th>
         <th>Nombre</th>
         <th>Matricula</th>
          <th>Carrera</th>
@@ -30,16 +31,22 @@
       </tr>
       </thead>
       <tbody>
-     <tr ng-repeat="shalala in modelo.alumnos|asistentes:mostrarTodos">
-        <td>{{shalala.nombre}}</td>
-        <td>{{shalala.matricula}}</td>
-          <td>{{shalala.carrera}}</td>
-        <td><input type="checkbox" ng-model="shalala.estatus"/></td>
-         <td> <button class="btn btn-default" ng-click="editar(shalala)">Editar</button></td>
-
-     </tr>
+         <tr ng-repeat="shalala in modelo.alumnos|asistentes:mostrarTodos" ng-class="$odd ? 'Red':'Green'">
+            <td>{{$index}}</td>
+            <td>{{shalala.nombre}}</td>
+            <td>{{shalala.matricula}}</td>
+            <td>{{shalala.estatus}}</td>
+            <td><input type="checkbox" ng-model="shalala.estatus"/></td>
+            <td> <button class="btn btn-default" ng-click="editar(shalala)">Editar</button></td>
+         </tr>
       </tbody>
   </table>
+  <br/>
+
+ 
+
+
+
   <div class="checkbox-inline">
   <label><input type="checkbox" ng-model="mostrarTodos"/>Mostrar todos </label>
   </div>

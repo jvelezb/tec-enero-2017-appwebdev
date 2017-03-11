@@ -1,0 +1,5 @@
+{"alumnos":[
+	{"id":1,"nombre": "Jose","matricula":"A000324324","estatus": false},
+  	{"nombre": "Alejandro","id":2, "matricula":"A000354354324","estatus": false},
+  	{"id":3,"nombre": "Daniela","matricula":"A0003345324","estatus":true}
+  ]}

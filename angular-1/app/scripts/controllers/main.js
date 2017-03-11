@@ -7,14 +7,30 @@
  * # MainCtrl
  * Controller of the angularTec1App
  */
+
+
 angular.module('angularTec1App')
-  .controller('MainCtrl', function ($scope,$log) {
-  	var modelo={
-  		profesor : "Juan Velez",
-  		alumnos:[{id:1,nombre: "Jose",matricula:'A000324324',estatus: false},
-  				{id:2,nombre: "Alejandro", matricula:'A000354354324',estatus: false},
-  				{id:3,nombre: "Daniela",matricula:'A0003345324',estatus:true}]
-  	};
+  .controller('MainCtrl', function ($scope,$log,$http) {
+  	 var  modelo={
+      profesor : "Juan Velez",
+    };
+
+    $scope.settings={
+      green :"Green",
+      red : "Red" 
+    }
+
+   $http({
+        method: 'GET',
+        url: '/alumnos.json'
+        }).then(function successCallback(response) {
+            $log.debug("successCallback"+response.data.alumnos);
+            $scope.modelo.alumnos = response.data.alumnos
+          }, function errorCallback(response) {
+            $log.debug("errorCallback");
+        });
+    $log.debug("en el controlador"+modelo)
+    $scope.Red =""
   	modelo.carrerasDisponibles = ['ITC','ITI','IEC'];
   	$scope.modelo = modelo;
    $scope.cuentaAsistentes= function(){
