@@ -10,7 +10,7 @@
 
 
 angular.module('angularTec1App')
-  .controller('MainCtrl', function ($scope,$log,$http) {
+  .controller('MainCtrl',function ($scope,$log,$http,$location,PasaDatos) {
   	 var  modelo={
       profesor : "Juan Velez",
     };
@@ -54,6 +54,12 @@ angular.module('angularTec1App')
 
    		
  
+   }
+   $scope.enviarControlador = function(){
+    $log.debug('estoy en el enviarContolador');
+      PasaDatos.setProfesor($scope.modelo.profesor);
+      PasaDatos.setAlumnos($scope.modelo.alumnos);
+       $location.path('/destino1');
    }
    $scope.editar = function(alumno){
    		$log.debug('el valor de alumno id:'+alumno.id);

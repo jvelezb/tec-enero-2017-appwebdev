@@ -28,14 +28,14 @@
 
           
 
-            <a class="navbar-brand" href="#/">Ejemplo de la clase</a>
+            <a class="navbar-brand" href="#!/">Ejemplo de la clase</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-              <li class="#/active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
+              <li class="#/active"><a href="#!/">Home</a></li>
+              <li><a ng-href="#!/destino1">Destino1</a></li>
 
             </ul>
           </div>
@@ -70,10 +70,15 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        
         <script src="scripts/filters/asistentes.js"></script>
+        <script src="scripts/controllers/destino1.js"></script>
+         <script src="scripts/services/pasadatos.js"></script>
+        
+        <script src="scripts/controllers/nombre.js"></script>
         <!-- endbuild -->
 </body>
 </html>

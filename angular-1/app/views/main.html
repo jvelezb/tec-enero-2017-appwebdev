@@ -4,6 +4,7 @@
         <span ng-class="alertaAlumnos()" ng-hide="cuentaAsistentes()==modelo.alumnos.length">{{cuentaAsistentes()}}</span></h1>
 </div>
 <div class="panel">
+<div ng-bind-html="thisCanBeusedInsideNgBindHtml"></div>
   <div class="input-group">
     <input class ="form-control" ng-model="alumnoInput.nombre"/>
     </div>
@@ -16,9 +17,11 @@
     </select>
     <span class="input-group-btn">
 
-    <button class="btn btn-default" ng-click="addAlumno(alumnoInput)">Añadir</button>
+    <button class="btn btn-default" ng-click="addAlumno(alumnoInput)">Añadir</button><br/>
+    <button class="btn btn-default" ng-click="enviarControlador()">Envio a una nueva pantalla</button>
     </span>
   </div>
+  <p> se agrega este link para un nuevo elemento <a ng-href="#!/destino1">Liga a destino1 ojo debe ser "#!/destino"</a>
   <table class="table ">
     <thead>
       <tr>

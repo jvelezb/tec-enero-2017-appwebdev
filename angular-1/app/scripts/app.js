@@ -23,6 +23,16 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/destino1', {
+        templateUrl: 'views/destino1.html',
+        controller: 'Destino1Ctrl',
+        controllerAs: 'destino1'
+      })
+      .when('/nombre', {
+        templateUrl: 'views/nombre.html',
+        controller: 'NombreCtrl',
+        controllerAs: 'nombre'
+      })
       .otherwise({
         redirectTo: '/'
       });
