@@ -1,0 +1,8 @@
+import mx.itesm.clase.web.loquesea.TareasPendientes
+
+model {
+	Iterable<TareasPendientes> tareasPendientesList
+}
+
+json tmpl.tareasPendientes(tareasPendientesList ?: [])
+

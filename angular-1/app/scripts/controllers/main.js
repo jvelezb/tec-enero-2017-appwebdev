@@ -31,7 +31,7 @@ angular.module('angularTec1App')
         });
     $log.debug("en el controlador"+modelo)
     $scope.Red =""
-  	modelo.carrerasDisponibles = ['ITC','ITI','IEC'];
+  	modelo.carrerasDisponibles = ['Mazda','Versa','Ferrari'];
   	$scope.modelo = modelo;
    $scope.cuentaAsistentes= function(){
    	 var cuenta = 0;

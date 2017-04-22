@@ -1,0 +1,7 @@
+import mx.itesm.clase.web.loquesea.TareasPendientes
+
+model {
+	TareasPendientes tareasPendientes
+}
+
+json tmpl.tareasPendientes(tareasPendientes)

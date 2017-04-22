@@ -1,0 +1,18 @@
+import mx.itesm.Alumnos
+
+model {
+	Alumnos alumnos
+}
+
+
+json {
+        imagenes {
+                self {
+                        href "http://shslala"+alumnos.matricula +".jpg"
+                }
+        }
+   
+  id alumnos.id
+  nombrecompleto alumnos.nombre +" " + alumnos.apellidos
+  enabled alumnos.enabled
+}

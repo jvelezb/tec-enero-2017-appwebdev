@@ -1,0 +1,17 @@
+import mx.itesm.clase.web.loquesea.TareasPendientes
+
+model {
+	TareasPendientes tareasPendientes
+}
+
+json{
+	id tareasPendientes.id
+	desc tareasPendientes.descripcion
+	terminado tareasPendientes.hecho
+	_links{
+		self{
+			href "hola mundo"
+		}
+	}
+}
+
