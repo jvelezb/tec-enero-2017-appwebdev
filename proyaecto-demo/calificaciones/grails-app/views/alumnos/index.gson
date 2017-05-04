@@ -1,8 +1,0 @@
-import mx.itesm.Alumnos
-
-model {
-	Iterable<Alumnos> alumnosList
-}
-
-json tmpl.alumnos(alumnosList ?: [])
-

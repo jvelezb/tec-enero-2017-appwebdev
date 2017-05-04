@@ -2,6 +2,7 @@ package proyectoalumnos
 
 import mx.itesm.ccm.Alumnos
 
+
 class BootStrap {
 
     def init = { servletContext ->
@@ -22,7 +23,10 @@ class BootStrap {
     		         apellidos:"ABC",
     		         edad: 19,
     		         email:"jluis@itesm.mx",
-    		         habilitado:false).save()   
+    		         habilitado:false).save()  
+        Role rol1 = new Role("ROLE_ADMIN").save()
+        User usuario1 = new User("Administrador","123456").save()
+        UserRole.create(usuario1,rol1,true);
     		    }
     def destroy = {
     }
